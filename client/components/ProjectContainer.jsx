@@ -1,4 +1,5 @@
 import React from 'react'
+import { CSSTransition, SwitchTransition } from 'react-transition-group'
 import ProjectCard from './ProjectCard'
 import ProjectView from './ProjectView'
 
@@ -22,9 +23,9 @@ class ProjectContainer extends React.Component {
         <div className='container_header'>
           <h1>Projects</h1>
         </div>
-        
+
         <div className='container_row'>
-          <div className='container_half grid'>
+          <div className='container_half grid' style={{zIndex: 10, backgroundColor: 'white'}}>
             {
               projects.map(project => (
                 <ProjectCard key={project.id} {...project} onClick={this.handleClick} />
@@ -32,7 +33,18 @@ class ProjectContainer extends React.Component {
             }
           </div>
           <div className='container_half'>
-            <ProjectView activeProject={this.state.activeProject} />
+
+            <SwitchTransition mode={'out-in'}>
+              <CSSTransition
+                key={this.state.activeProject}
+                addEndListener={(node, done) => { node.addEventListener("transitionend", done, false) }}
+                classNames="slide">
+
+                <ProjectView activeProject={this.state.activeProject} />
+
+              </CSSTransition>
+            </SwitchTransition>
+
           </div>
         </div>
       </div>

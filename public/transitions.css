@@ -1,14 +1,17 @@
-.drop-down-enter {
-  height: 0px;
+.slide-enter {
+  transform: translateX(-100%);
 }
-.drop-down-enter-active {
-  height: 100px;
-  transition: height 200ms;
+
+.slide-enter.slide-enter-active {
+  transform: translateX(0);
+  transition: 250ms ease;
 }
-.drop-down-exit {
-  height: 100px;
+
+.slide-exit {
+  transform: translateX(0%);
 }
-.drop-down-exit-active {
-  height: 0;
-  transition: height 200ms;
+
+.slide-exit.slide-exit-active {
+  transform: translateX(100%);
+  transition: 250ms ease;
 }

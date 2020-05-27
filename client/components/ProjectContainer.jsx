@@ -25,14 +25,14 @@ class ProjectContainer extends React.Component {
         </div>
 
         <div className='container_row'>
-          <div className='container_half grid' style={{zIndex: 10, backgroundColor: 'white'}}>
+          <div className='container_column grid'>
             {
               projects.map(project => (
                 <ProjectCard key={project.id} {...project} onClick={this.handleClick} />
               ))
             }
           </div>
-          <div className='container_half'>
+          <div className='container_column'>
 
             <SwitchTransition mode={'out-in'}>
               <CSSTransition

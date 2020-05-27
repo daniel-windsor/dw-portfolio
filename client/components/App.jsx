@@ -6,6 +6,7 @@ import ProjectContainer from './ProjectContainer'
 import Contact from './Contact'
 import AboutMe from './AboutMe'
 import SkillsContainer from './SkillsContainer'
+import LandingPage from './LandingPage'
 
 class App extends React.Component {
 
@@ -13,6 +14,7 @@ class App extends React.Component {
     return (
       <>
         <Navbar />
+        <LandingPage />
         <AboutMe />
         <SkillsContainer />
         <ProjectContainer />

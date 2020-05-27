@@ -4,7 +4,6 @@ class AboutMe extends React.Component {
   render() {
     return (
       <div id='about' className='container'>
-        <img className='img-hero' src="/hero-compressed.JPG"></img>
         <h1>About me</h1>
         <p>
           I am a full stack web developer with a background in teaching. I love the combination of problem solving and creativity that developing provides. I find it extremely satisfying to work a problem through to a solution.

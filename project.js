@@ -3,20 +3,12 @@ const moment = require('moment')
 
 export const projects = [
   {
-    id: 1,
-    title: 'Enspiral Dev Academy - Foundations',
-    subtitle: '',
-    icon: <i className="fas fa-lg fa-laptop-code"></i>,
-    date: '3rd May 2020',
-    description: ''
-  },
-  {
-    id: 2,
+    id: 0,
     title: 'Calculator Time',
     date: '19th February - 22nd February 2020',
     icon: <i className="fas fa-lg fa-calculator"></i>,
     github: 'https://github.com/daniel-windsor/calculator',
-    project: 'https://daniel-windsor.github.io/calculator/',
+    project: 'https://daniel-windsor.github.io/calculator-time/',
     description: 'The culmination of six weeks of self-study.'
   },
   {
@@ -25,15 +17,8 @@ export const projects = [
     date: '24th February - 11th March 2020',
     icon: <i className="fas fa-lg fa-chess-king"></i>,
     github: 'https://github.com/daniel-windsor/chess-collab',
-    project: 'https://daniel-windsor.github.io/chess-collab/',
+    project: 'https://daniel-windsor.github.io/sophistocated-chess/',
     description: 'An exercise to practice the skills learned through foundations, and the first real attempt at peer coding.  Chess in vanilla JavaScript, with a (not so intelligent) AI.'
-  },
-  {
-    id: 4,
-    title: 'Enspiral Dev Academy - Bootcamp',
-    icon: <i className="fas fa-lg fa-laptop-code"></i>,
-    date: '16th March 2020',
-    description: 'Bootcamp Begins',
   },
   {
     id: 5,
@@ -70,19 +55,5 @@ export const projects = [
     github: 'https://github.com/piwakawaka-2020/SpacePants-frontEnd',
     project: 'https://spacepants.herokuapp.com/',
     description: 'The Final Project.  I led a team of five other developers to create a multiplayer party game using web sockets'
-  },
-  {
-    id: 9,
-    title: 'Enspiral Dev Academy - Graduation',
-    icon: <i className="fas fa-lg fa-laptop-code"></i>,
-    date: '14th May 2020',
-    description: 'Graduation',
-  },
-  {
-    id: 10,
-    title: 'Up Next...',
-    date: moment().format('Do MMMM YYYY'),
-    icon: <i className="fas fa-lg fa-forward"></i>,
-    description: 'I am unsure where my coding journey will take me next.  What I do know is that I want to learn so much more.  I feel so far I have barely dipped my toes in.  I\'m ready to dive head first!'
   }
 ]

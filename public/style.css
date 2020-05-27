@@ -88,9 +88,12 @@ a {
 }
 
 .container_half {
-  height: 100%;
+  height: calc(100% - 100px);
   width: 50%;
-  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  overflow: hidden;
 }
 
 .project_box {

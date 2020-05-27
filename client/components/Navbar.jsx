@@ -17,7 +17,7 @@ class Navbar extends React.Component {
               smooth={true}
               offset={-75}
               duration={500} >
-              About Me
+              About
           </Link>
           </li>
           <li className='nav_item'>
@@ -50,7 +50,7 @@ class Navbar extends React.Component {
               smooth={true}
               offset={-75}
               duration={500} >
-              Contact Me
+              Contact
           </Link>
           </li>
         </ul>

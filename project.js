@@ -13,6 +13,15 @@ export const projects = [
   },
   {
     id: 1,
+    title: 'Feeding Ferments',
+    date: '28th March - Present',
+    icon: <i className="fas fa-lg fa-bread-slice"></i>,
+    github: 'https://github.com/daniel-windsor/feeding-ferments',
+    project: 'nothing yet',
+    description: 'During the course we had the opportunity to work on a personal project.  Feeding Ferments is an app that allows you to track your fermentations, as well as how and when they should be fed.  This app has been rebuilt from scratch several times as we learned about new tech.  Still  in progress.'
+  },
+  {
+    id: 2,
     title: 'TrakPhat$tax',
     date: '29th April - 1st May 2020',
     icon: <i className="fas fa-lg fa-search-dollar"></i>,
@@ -21,22 +30,13 @@ export const projects = [
     description: 'The first big group project with a clear set of requirements to meet.  TrakPhat$tax (previously known as Show Me The Money) is an app that calculates a meeting\'s cost based on the attendee\'s hourly wage.'
   },
   {
-    id: 2,
+    id: 3,
     title: 'GrapeVine',
     date: '27th April - 28th April 2020',
     icon: <i className="fas fa-check"></i>,
     github: 'https://github.com/piwakawaka-2020/todo-full-stack',
     project: 'https://grapevine-todoapp.herokuapp.com/',
     description: 'Full stack todo app built in a day, as a way to consolidate the skills we have learned so far.'
-  },
-  {
-    id: 3,
-    title: 'Feeding Ferments',
-    date: '28th March - Present',
-    icon: <i className="fas fa-lg fa-bread-slice"></i>,
-    github: 'https://github.com/daniel-windsor/feeding-ferments',
-    project: 'nothing yet',
-    description: 'During the course we had the opportunity to work on a personal project.  Feeding Ferments is an app that allows you to track your fermentations, as well as how and when they should be fed.  This app has been rebuilt from scratch several times as we learned about new tech.  Still  in progress.'
   },
   {
     id: 4,

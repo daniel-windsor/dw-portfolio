@@ -1,5 +1,5 @@
 .slide-enter {
-  transform: translateX(-100%);
+  transform: translateX(-110%);
 }
 
 .slide-enter.slide-enter-active {
@@ -12,6 +12,6 @@
 }
 
 .slide-exit.slide-exit-active {
-  transform: translateX(100%);
+  transform: translateX(110%);
   transition: 250ms ease;
 }

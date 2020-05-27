@@ -1,0 +1,188 @@
+$defaultPadding: 10px;
+$defaultMargin: 20px;
+
+// body * { outline: 1px #f00 solid; }
+
+body {
+  margin: 0px;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Baloo 2", cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.nav_item {
+  display: inline;
+  padding: 0rem 3rem;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .active {
+    text-decoration: underline;
+  }
+
+  &.invisible {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+}
+
+.hero-img {
+  box-sizing: border-box;
+  background: url("/img/hero.jpg") no-repeat center fixed;
+  background-size: cover;
+  filter: blur(8px);
+  height: 100vh;
+  width: 100%;
+}
+
+.hero-text {
+  text-align: center;
+  font-size: larger;
+  position: absolute;
+  top: 40%;
+  right: 10%;
+}
+
+.container {
+  margin-top: 75px;
+  height: calc(100vh - 75px);
+}
+
+.container_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: calc(100vh - 100px);
+}
+
+.container_col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+}
+
+.container_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.container_grid {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}
+
+.container_column {
+  box-sizing: border-box;
+  height: calc(100% - 100px);
+  width: 50%;
+  overflow: hidden;
+  padding: $defaultPadding;
+  margin: $defaultMargin;
+  border-radius: 5px;
+}
+
+.header-container {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 4rem;
+}
+
+@mixin box {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: $defaultPadding;
+  margin: $defaultMargin;
+}
+
+.box_skill {
+  @include box();
+  width: 33%;
+  height: 50%;
+}
+
+.box_project {
+  @include box();
+  width: 25%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.box_contact {
+  @include box();
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 20%;
+  text-align: center;
+}
+
+.project-display {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image-container {
+  max-width: 100%;
+  max-height: 80%;
+  align-self: center;
+  overflow: hidden;
+}
+
+.project-img {
+  align-self: center;
+  max-width: 100%;
+  max-height: 150%;
+}
+
+.link_bar {
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  margin: $defaultMargin;
+}
+
+.contact-icon {
+  padding: 2rem;
+  font-size: 3rem;
+}

@@ -1,9 +1,14 @@
 import React from 'react'
 
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link, animateScroll } from "react-scroll";
 
 
 class Navbar extends React.Component {
+
+  state = {
+    active: 'about'
+  }
+
   render() {
     return (
       <div className='navbar'>
@@ -16,7 +21,8 @@ class Navbar extends React.Component {
               spy={true}
               smooth={true}
               offset={-75}
-              duration={500} >
+              duration={500}
+              onSetActive={() => this.setState({ active: 'about' })} >
               About
           </Link>
           </li>
@@ -27,7 +33,8 @@ class Navbar extends React.Component {
               spy={true}
               smooth={true}
               offset={-75}
-              duration={500} >
+              duration={500}
+              onSetActive={() => this.setState({ active: 'skills' })} >
               Skills
           </Link>
           </li>
@@ -38,7 +45,8 @@ class Navbar extends React.Component {
               spy={true}
               smooth={true}
               offset={-75}
-              duration={500} >
+              duration={500}
+              onSetActive={() => this.setState({ active: 'projects' })} >
               Projects
           </Link>
           </li>
@@ -49,11 +57,17 @@ class Navbar extends React.Component {
               spy={true}
               smooth={true}
               offset={-75}
-              duration={500} >
+              duration={500}
+              onSetActive={() => this.setState({ active: 'contact' })} >
               Contact
           </Link>
           </li>
         </ul>
+
+        <ul>
+          <li className={`nav_item ${this.state.active === 'about' ? 'invisible' : undefined}`} onClick={() => { animateScroll.scrollToTop() }}>Top</li>
+        </ul>
+
 
       </div>
     )

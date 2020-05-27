@@ -5,7 +5,8 @@ class ProjectCard extends React.Component {
     return (
       
       <div 
-        className='box_project' onClick={() => this.props.onClick(this.props.id)}>
+        className='box_project'
+        onClick={() => this.props.onClick(this.props.id)}>
         <h4>{this.props.title}</h4>
       </div>
     )

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SkillsCard = props => (
-  <div className='container_card'>
+  <div className='box_skill'>
     <h1>{props.name}</h1>
     <ul>
       {

@@ -131,7 +131,7 @@ a {
   padding: 4rem;
 }
 
-.project_box {
+.container_project {
   width: 33%;
   border: 1px solid black;
   border-radius: 5px;
@@ -139,7 +139,52 @@ a {
   padding: 20px;
 }
 
-.project_box:hover {
+.container_project:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.box_skill {
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  padding: 20px;
+}
+
+.box_skill:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.box_project {
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  padding: 20px;
+}
+
+.box_project:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.box_contact {
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  padding: 20px;
+}
+
+.box_contact:hover {
   cursor: pointer;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);

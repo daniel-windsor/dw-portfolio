@@ -102,7 +102,7 @@ a {
   padding: 4rem;
 }
 
-.project_box {
+.container_project {
   width: 33%;
   border: 1px solid black;
   border-radius: 5px;
@@ -114,6 +114,31 @@ a {
     transform: scale(1.05);
     transition: all 0.2s ease;
   }
+}
+
+@mixin box {
+    border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  padding: $defaultPadding;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+  }
+}
+
+.box_skill {
+  @include box()
+}
+
+.box_project {
+  @include box()
+}
+
+.box_contact {
+  @include box()
 }
 
 .grid {

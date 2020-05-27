@@ -1,0 +1,14 @@
+.drop-down-enter {
+  height: 0px;
+}
+.drop-down-enter-active {
+  height: 100px;
+  transition: height 200ms;
+}
+.drop-down-exit {
+  height: 100px;
+}
+.drop-down-exit-active {
+  height: 0;
+  transition: height 200ms;
+}

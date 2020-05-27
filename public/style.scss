@@ -1,0 +1,66 @@
+$background: #f9f5a5;
+$dark: #212316;
+$green: #8aa847;
+
+body {
+  background-color: $background;
+  margin: 0px;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Baloo 2", cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-top: 4.5rem;
+  width: 100vw;
+  height: 100vh - 4.5rem;
+}
+
+.customButton {
+  color: black;
+  text-align: center;
+  margin: 1rem;
+  padding: 0.5rem;
+  width: 30%;
+  border-radius: 5px;
+  background-color: $background;
+}
+
+.navbar {
+  position: fixed;
+  background-color: $dark;
+  padding: 1rem;
+  height: 2.5rem;
+  width: 100vw;
+
+  .link {
+    @extend .customButton;
+    &:hover {
+      background-color: $green;
+    }
+  }
+}
+
+.header-container {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 4rem;
+  background-color: $green;
+}
+
+.btn-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.img-hero {
+  height: auto;
+  width: 50vw;
+}

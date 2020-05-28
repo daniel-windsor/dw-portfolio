@@ -9,6 +9,10 @@ class Contact extends React.Component {
           <h1>Contact</h1>
         </div>
 
+        <span className='subtitle'>
+          <h2>Why not get in touch? I'd love to work with you!</h2>
+        </span>
+
         <div className='container_col'>
           <a href='mailto:daniel.windsor@protonmail.com' target='_blank' className='box_contact'>
             <i className="fas fa-envelope-square contact-icon"></i>

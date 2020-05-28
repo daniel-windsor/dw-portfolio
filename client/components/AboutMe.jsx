@@ -7,6 +7,9 @@ class AboutMe extends React.Component {
         <div className='container_header'>
           <h1>About me</h1>
         </div>
+        <span className='subtitle'>
+            <h2>Nice to meet you!</h2>
+        </span>
         <div className='container_center'>
           <span className='container_content'>
             <p>

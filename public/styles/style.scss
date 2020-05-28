@@ -12,8 +12,8 @@ body {
   margin: 0px;
   padding: 0;
   font-size: 18px;
-  font-family: "Baloo 2", cursive;
   overflow-x: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 a {
@@ -26,13 +26,12 @@ a {
 }
 
 #skills {
-  background-image: url('img/noise.png'), linear-gradient(to right, #E9EEF1, #FBEC9A);
+  background-image: url('/img/noise.png'), linear-gradient(to right, #E9EEF1, #FBEC9A);
 
 }
 
 #contact {
-  background-image: url('img/noise.png'), linear-gradient(to right bottom,  #71594C, #2D2826);
-
+  background-image: url('/img/noise.png'), linear-gradient(to right bottom,  #71594C, #2D2826);
 }
 
 .navbar {
@@ -84,6 +83,12 @@ a {
   position: absolute;
   top: 40%;
   right: 10%;
+}
+
+.subtitle {
+  text-align: center;
+  position: relative;
+  top: 80px;
 }
 
 .container {

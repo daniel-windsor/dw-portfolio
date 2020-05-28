@@ -12,9 +12,9 @@ export const skills = [
     ],
   },
   {
-    name: '2020 Lockdown',
+    name: 'Softer Skills',
     technologies: [
-      'Remote working', 'Reliability', 'Motivation', 'Dedication'
+      'Agile', 'Remote working', 'Reliability', 'Motivation', 'Communication'
     ]
   }
 ]

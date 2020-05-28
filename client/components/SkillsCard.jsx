@@ -2,15 +2,12 @@ import React from 'react'
 
 const SkillsCard = props => (
   <div className='box_skill'>
-    <h1>{props.name}</h1>
-      <ul>
-        {
-          props.technologies.map(tech => (
-            <li key={tech}>{tech}</li>
-          ))
-        }
-      </ul>
-    <p>{props.description}</p>
+    <h1 style={{margin: 20 + 'px'}}>{props.name}</h1>
+    {
+      props.technologies.map(tech => (
+        <div className='skill_bubble' key={tech}>{tech}</div>
+      ))
+    }
   </div>
 )
 

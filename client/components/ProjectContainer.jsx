@@ -34,7 +34,7 @@ class ProjectContainer extends React.Component {
             <div
               className='project-background'
               style={{
-                backgroundImage: `linear-gradient(to bottom right, ${projects[active].gradient[0]}, ${projects[active].gradient[1]})`
+                backgroundImage: `url('img/noise.png'), linear-gradient(to bottom right, ${projects[active].gradient[0]}, ${projects[active].gradient[1]})`
               }}>
             </div>
 

@@ -8,6 +8,7 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 #about {
@@ -199,25 +200,31 @@ a {
 }
 
 .box_skill {
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 20px;
   width: 25%;
   height: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.skill_bubble {
+  border: 1px solid black;
+  border-radius: 500px;
+  padding: 10px;
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .box_project {
@@ -225,6 +232,7 @@ a {
   border-radius: 5px;
   padding: 10px;
   margin: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
   width: 25%;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.3);
@@ -239,6 +247,7 @@ a {
   border-radius: 5px;
   padding: 10px;
   margin: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

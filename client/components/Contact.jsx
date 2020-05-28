@@ -9,7 +9,7 @@ class Contact extends React.Component {
           <h1>Contact</h1>
         </div>
 
-        <span className='subtitle'>
+        <span className='subtitle' style={{ color: '#D4BB7A'}}>
           <h2>Why not get in touch? I'd love to work with you!</h2>
         </span>
 

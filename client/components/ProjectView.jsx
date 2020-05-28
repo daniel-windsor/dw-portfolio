@@ -11,14 +11,16 @@ class ProjectView extends React.Component {
         <p>{project.description}</p>
 
         <div className='image-container'>
-          <img className='project-img' src={project.image} />
+          {this.props.image &&
+            <img className='project-img' src={this.props.image.src} />
+          }
         </div>
 
         <span className='link_bar'>
-          <a href={project.github} target='_blank'>GitHub</a>
+          <a className='box_contact' style={{textAlign: 'center', display: 'block' }} href={project.github} target='_blank'>GitHub</a>
           {
             project.project &&
-            <a href={project.project} target='_blank' target='_blank'>Link</a>
+            <a className='box_contact' style={{ textAlign: 'center', display: 'block' }} href={project.project} target='_blank' target='_blank'>Link</a>
           }
         </span>
       </div>

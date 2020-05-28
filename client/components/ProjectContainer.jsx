@@ -7,8 +7,23 @@ import { projects } from '../../project'
 
 class ProjectContainer extends React.Component {
 
+  componentDidMount() {
+
+    const images = projects.map(project => {
+      let img = new Image()
+      img.src = project.image
+
+      return img
+    })
+
+    this.setState({
+      images: images
+    })
+  }
+
   state = {
-    activeProject: 0
+    activeProject: 0,
+    images: []
   }
 
   handleClick = e => {
@@ -62,7 +77,7 @@ class ProjectContainer extends React.Component {
                 addEndListener={(node, done) => { node.addEventListener("transitionend", done, false) }}
                 classNames="slide">
 
-                <ProjectView activeProject={this.state.activeProject} />
+                <ProjectView activeProject={active} image={this.state.images[active]} />
 
               </CSSTransition>
             </SwitchTransition>

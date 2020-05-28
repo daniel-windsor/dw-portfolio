@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-size: 18px;
   font-family: "Baloo 2", cursive;
+  overflow-x: hidden;
 }
 
 a {
@@ -152,10 +153,10 @@ a {
           box-sizing: border-box;
   height: calc(100% - 100px);
   width: 50%;
-  overflow: hidden;
   padding: 10px;
   margin: 20px;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .header-container {
@@ -180,7 +181,7 @@ a {
   margin: 20px;
   width: 25%;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .box_project:hover {
@@ -199,12 +200,12 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 20%;
   text-align: center;
 }
@@ -221,6 +222,15 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
+}
+
+.project-background {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 100px);
+  z-index: -1;
+  overflow: hidden;
 }
 
 .image-container {

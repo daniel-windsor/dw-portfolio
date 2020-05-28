@@ -18,11 +18,28 @@ class ProjectContainer extends React.Component {
   }
 
   render() {
+    const active = this.state.activeProject
     return (
       <div id='projects' className='container'>
         <div className='container_header'>
           <h1>Projects</h1>
         </div>
+
+        <SwitchTransition mode={'in-out'}>
+          <CSSTransition
+            key={this.state.activeProject}
+            addEndListener={(node, done) => { node.addEventListener("transitionend", done, false) }}
+            classNames="slide">
+
+            <div
+              className='project-background'
+              style={{
+                backgroundImage: `linear-gradient(to bottom right, ${projects[active].gradient[0]}, ${projects[active].gradient[1]})`
+              }}>
+            </div>
+
+          </CSSTransition>
+        </SwitchTransition>
 
         <div className='container_row'>
           <div className='container_grid'>
@@ -32,7 +49,7 @@ class ProjectContainer extends React.Component {
               ))
             }
           </div>
-          <div className='container_column' style={{ backgroundColor: 'rgba(255, 255, 255, 0.5' }}>
+          <div className='container_column' style={{ backgroundColor: 'rgba(255, 255, 255, 0.3', border: '1px solid black' }}>
 
             <SwitchTransition mode={'out-in'}>
               <CSSTransition
@@ -47,7 +64,7 @@ class ProjectContainer extends React.Component {
 
           </div>
         </div>
-      </div>
+      </div >
     )
   }
 }

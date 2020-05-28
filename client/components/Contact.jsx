@@ -10,21 +10,21 @@ class Contact extends React.Component {
         </div>
 
         <div className='container_col'>
-
-          <span className='box_contact'>
-            <i className="fab fa-linkedin contact-icon"></i>
-            <h2>LinkedIn</h2>
-          </span>
-
-          <span className='box_contact'>
-            <i className="fab fa-github-square contact-icon"></i>
-            <h2>GitHub</h2>
-          </span>
-
-          <span className='box_contact'>
+          <a href='mailto:daniel.windsor@protonmail.com' target='_blank' className='box_contact'>
             <i className="fas fa-envelope-square contact-icon"></i>
             <h2>Email</h2>
-          </span>
+          </a>
+
+          <a href='https://www.linkedin.com/in/daniel-windsor-7785361a7/' target='_blank' className='box_contact'>
+            <i className="fab fa-linkedin contact-icon"></i>
+            <h2>LinkedIn</h2>
+          </a>
+
+          <a href='https://github.com/daniel-windsor' target='_blank' className='box_contact'>
+            <i className="fab fa-github-square contact-icon"></i>
+            <h2>GitHub</h2>
+          </a>
+
         </div>
       </div>
     )

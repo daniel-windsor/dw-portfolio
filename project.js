@@ -19,8 +19,7 @@ export const projects = [
     icon: <i className="fas fa-lg fa-bread-slice"></i>,
     image: '/img/feeding_ferments.png',
     gradient: ['#d6d4c4', '#21381e'],
-    github: 'https://github.com/daniel-windsor/feeding-ferments',
-    project: 'nothing yet',
+    github: 'https://github.com/daniel-windsor/ff_frontend',
     description: 'During the course we had the opportunity to work on a personal project.  Feeding Ferments is an app that allows you to track your fermentations, as well as how and when they should be fed.  This app has been rebuilt from scratch several times as we learned about new tech.  Still  in progress.'
   },
   {
@@ -32,7 +31,7 @@ export const projects = [
     gradient: ['#d7d8ba', '#1f8251'],
     github: 'https://github.com/piwakawaka-2020/todo-full-stack',
     project: 'https://trakphatstax.herokuapp.com/#/',
-    description: 'The first big group project with a clear set of requirements to meet.  TrakPhat$tax (previously known as Show Me The Money) is an app that calculates a meeting\'s cost based on the attendee\'s hourly wage.'
+    description: 'TrakPhat$tax (previously known as Show Me The Money) is an app that calculates a meeting\'s cost based on the attendee\'s hourly wage.'
   },
   {
     id: 3,
@@ -43,7 +42,7 @@ export const projects = [
     gradient: ['#2c3d40', '#25282a'],
     github: 'https://github.com/daniel-windsor/chess-collab',
     project: 'https://daniel-windsor.github.io/sophistocated-chess/',
-    description: 'An exercise to practice the skills learned through foundations, and the first real attempt at peer coding.  Chess in vanilla JavaScript, with a (not so intelligent) AI.'
+    description: 'Chess built entirely in native JavaScript using DOM manipulation.  As a bonus it includes an AI that occasionally cheats.'
   },
   {
     id: 4,

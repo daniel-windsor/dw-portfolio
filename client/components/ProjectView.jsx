@@ -13,10 +13,13 @@ class ProjectView extends React.Component {
         <div className='image-container'>
           <img className='project-img' src={project.image} />
         </div>
-        
+
         <span className='link_bar'>
           <a href={project.github} target='_blank'>GitHub</a>
-          <a href={project.project} target='_blank' target='_blank'>Link</a>
+          {
+            project.project &&
+            <a href={project.project} target='_blank' target='_blank'>Link</a>
+          }
         </span>
       </div>
     )

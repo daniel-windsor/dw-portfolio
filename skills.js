@@ -1,6 +1,6 @@
 export const skills = [
   {
-    name: 'Essential Web Development',
+    name: 'The Essentials',
     technologies: [
       'HTML', 'CSS', 'SASS/SCSS', 'RESTful APIS', 'Git Version Control'
     ],
@@ -13,5 +13,4 @@ export const skills = [
     ],
     description: 'Full stack JavaScript'
   },
-
 ]

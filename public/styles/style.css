@@ -11,11 +11,13 @@ a {
 }
 
 .navbar {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  width: 100%;
+  height: 75px;
   position: fixed;
   top: 0px;
   z-index: 100;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,8 +31,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 75px;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -76,42 +76,7 @@ a {
 }
 
 .container {
-  margin-top: 75px;
-  height: calc(100vh - 75px);
-}
-
-.container_row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: calc(100vh - 100px);
-}
-
-.container_col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: calc(100vh - 100px);
+  height: calc(100vh - $navHeight);
 }
 
 .container_header {
@@ -127,7 +92,43 @@ a {
   height: 100px;
 }
 
+.container_row {
+  height: calc(100vh - 100px - 75px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container_col {
+  height: calc(100vh - 100px - 75px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .container_grid {
+  width: 50%;
+  height: calc(100vh - 100px - 75px);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -145,17 +146,14 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
 }
 
 .container_column {
+  width: 50%;
+  height: calc(100vh - 100px - 75px);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: calc(100% - 100px);
-  width: 50%;
-  padding: 10px;
-  margin: 20px;
-  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
   overflow: hidden;
 }
 
@@ -211,7 +209,10 @@ a {
 }
 
 .project-display {
-  height: 100%;
+  height: calc(100vh - 100px - 75px);
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,20 +223,18 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  overflow: hidden;
 }
 
 .project-background {
-  position: absolute;
   width: 100%;
-  height: calc(100% - 100px);
-  z-index: -1;
-  overflow: hidden;
+  height: calc(100vh - 100px - 75px);
+  position: absolute;
+  z-index: -2;
 }
 
 .image-container {
   max-width: 100%;
-  max-height: 80%;
+  max-height: 60%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -247,7 +246,7 @@ a {
       -ms-grid-row-align: center;
       align-self: center;
   max-width: 100%;
-  max-height: 150%;
+  max-height: 120%;
 }
 
 .link_bar {

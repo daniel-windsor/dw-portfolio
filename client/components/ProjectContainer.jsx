@@ -42,6 +42,7 @@ class ProjectContainer extends React.Component {
         </SwitchTransition>
 
         <div className='container_row'>
+
           <div className='container_grid'>
             {
               projects.map(project => (
@@ -49,7 +50,8 @@ class ProjectContainer extends React.Component {
               ))
             }
           </div>
-          <div className='container_column' style={{ backgroundColor: 'rgba(255, 255, 255, 0.3', border: '1px solid black' }}>
+
+          <div className='container_column'>
 
             <SwitchTransition mode={'out-in'}>
               <CSSTransition

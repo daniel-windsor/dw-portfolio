@@ -4,16 +4,42 @@ $defaultMargin: 20px;
 $navHeight: 75px;
 $headerHeight: 150px;
 
-// body * {
-//   outline: 1px #f00 solid;
-// }
+@mixin containerSize($height: 100%, $width: 100%) {
+  min-height: $height;
+  width: $width;
+  box-sizing: border-box;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: $defaultPadding;
+  margin: $defaultMargin;
+  background-color: rgba(255, 255, 255, 0.3);
+}
 
 body {
-  margin: 0px;
+  margin: 0;
   padding: 0;
   font-size: 18px;
-  overflow-x: hidden;
-  font-family: 'Source Sans Pro', sans-serif;
+  // overflow-x: hidden;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 a {
@@ -22,29 +48,27 @@ a {
 }
 
 #about {
-  background-image: url('/img/noise.png'), linear-gradient(to right, #FBEC9A, #D4BB7A)
+  background-image: url("/img/noise.png"), linear-gradient(to right, #fbec9a, #d4bb7a);
 }
 
 #skills {
-  background-image: url('/img/noise.png'), linear-gradient(to right, #E9EEF1, #FBEC9A);
-
+  background-image: url("/img/noise.png"), linear-gradient(to right, #e9eef1, #fbec9a);
 }
 
 #contact {
-  background-image: url('/img/noise.png'), linear-gradient(to right bottom,  #71594C, #2D2826);
+  background-image: url("/img/noise.png"), linear-gradient(to right bottom, #71594c, #2d2826);
 }
 
 .navbar {
+  @include flex-row();
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: $navHeight;
   position: fixed;
   top: 0px;
   z-index: 100;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -68,21 +92,24 @@ a {
   }
 }
 
+.container {
+  @include containerSize(calc(100vh - #{$navHeight}));
+}
+
 .hero-img {
+  @include containerSize(100vh);
   box-sizing: border-box;
   background: url("/img/hero.jpg") no-repeat center fixed;
   background-size: cover;
   filter: blur(8px);
-  height: 100vh;
-  width: 100%;
 }
 
 .hero-text {
   text-align: center;
   font-size: larger;
   position: absolute;
-  top: 40%;
-  right: 10%;
+  top: 60%;
+  right: 0%;
 }
 
 .subtitle {
@@ -91,55 +118,41 @@ a {
   top: 80px;
 }
 
-.container {
-  height: calc(100vh - $navHeight);
-}
-
 .container_header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center();
   height: $headerHeight;
   background-color: white;
 }
 
 .container_row {
-  height: calc(100vh - #{$headerHeight} - #{$navHeight});
-  display: flex;
-  flex-direction: row;
+  @include containerSize(calc(100vh - #{$headerHeight} - #{$navHeight}));
+  @include flex-row();
   justify-content: space-evenly;
-  align-items: center;}
+  align-items: center;
+}
 
 .container_col {
-  height: calc(100vh - #{$headerHeight} - #{$navHeight});
-  display: flex;
-  flex-direction: column;
+  @include containerSize(calc(100vh - #{$headerHeight} - #{$navHeight}));
+  @include flex-col();
   justify-content: center;
   align-items: center;
 }
 
 .container_center {
-  height: calc(100vh - #{$headerHeight} - #{$navHeight});
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include containerSize(calc(100vh - #{$headerHeight} - #{$navHeight}));
+  @include flex-center()
 }
 
 .container_grid {
-  width: 50%;
-  height: calc(100vh - #{$headerHeight} - #{$navHeight});
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
+  @include containerSize(alc(100vh - #{$headerHeight} - #{$navHeight}), 50%);
+  @include flex-row();
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.container_column {
-  width: 50%;
-  height: calc(100vh - #{$headerHeight} - #{$navHeight});
-  box-sizing: border-box;
+.container_half {
+  @include containerSize(calc(100% - #{$headerHeight} - #{$navHeight}), 50%);
   background-color: rgba(255, 255, 255, 0.3);
   overflow: hidden;
 }
@@ -150,28 +163,12 @@ a {
   text-align: center;
 }
 
-.header-container {
-  text-align: center;
-  margin-bottom: 4rem;
-  padding: 4rem;
-}
-
-@mixin box {
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: $defaultPadding;
-  margin: $defaultMargin;
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
 .box_skill {
+  @include flex-row();
+  @include flex-center();
+  flex-wrap: wrap;
   width: 25%;
   height: 40%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 
 .skill_bubble {
@@ -180,7 +177,6 @@ a {
   padding: $defaultPadding;
   margin: $defaultMargin;
   background-color: rgba(255, 255, 255, 0.3);
-
 }
 
 .box_project {
@@ -196,25 +192,21 @@ a {
 
 .box_contact {
   @include box();
-  display: flex;
-  flex-direction: row;
+  @include flex-row();
   justify-content: flex-start;
   align-items: center;
   width: 20%;
 }
 
 .project-display {
+  @include flex-col();
   height: calc(100vh - #{$headerHeight} - #{$navHeight});
   padding: $defaultPadding;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 
 .project-background {
-  width: 100%;
-  height: calc(100vh - #{$headerHeight} - #{$navHeight});
+  @include containerSize(calc(100vh - #{$headerHeight} - #{$navHeight}), 100% );
   position: absolute;
   z-index: -2;
 }
@@ -233,15 +225,21 @@ a {
 }
 
 .link_bar {
-  z-index: 2;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+  @include flex-row();
   justify-content: space-evenly;
+  width: 100%;
+  z-index: 2;
   margin: $defaultMargin;
 }
 
 .contact-icon {
   padding: 2rem;
   font-size: 3rem;
+}
+
+@media screen and (min-width: 770px) {
+  .hero-text {
+    top: 40%;
+    right: 10%;
+  }
 }

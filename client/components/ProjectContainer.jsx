@@ -69,7 +69,7 @@ class ProjectContainer extends React.Component {
             }
           </div>
 
-          <div className='container_column'>
+          <div className='container_half'>
 
             <SwitchTransition mode={'out-in'}>
               <CSSTransition

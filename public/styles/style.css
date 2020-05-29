@@ -41,6 +41,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  padding: 5px;
   height: 75px;
   position: fixed;
   top: 0px;
@@ -57,7 +58,7 @@ a {
 
 .nav_item {
   display: inline;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   opacity: 1;
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;

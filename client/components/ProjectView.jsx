@@ -7,7 +7,7 @@ class ProjectView extends React.Component {
     const project = projects.find(pro => pro.id === this.props.activeProject)
     return (
       <div className='project-display'>
-        <h1>{project.title}</h1>
+        <h1 style={{textAlign: 'center'}}>{project.title}</h1>
         <p>{project.description}</p>
 
         <div className='image-container'>

@@ -38,7 +38,6 @@ body {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  // overflow-x: hidden;
   font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -61,7 +60,7 @@ a {
 
 .navbar {
   @include flex-row();
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: $navHeight;
@@ -70,11 +69,16 @@ a {
   z-index: 100;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.7);
+  overflow-x: hidden;
+}
+
+.nav_items {
+  padding: 0;
 }
 
 .nav_item {
   display: inline;
-  padding: 0rem 3rem;
+  padding: 0 1rem;
   opacity: 1;
   transition: opacity 0.2s ease;
 
@@ -105,28 +109,28 @@ a {
 }
 
 .hero-text {
+  width: 100%;
   text-align: center;
   font-size: larger;
   position: absolute;
   top: 60%;
-  right: 0%;
 }
 
 .subtitle {
   text-align: center;
   position: relative;
-  top: 80px;
+  top: 30px;
 }
 
 .container_header {
   @include flex-center();
-  height: $headerHeight;
+  height: $headerHeight/1.5;
   background-color: white;
 }
 
 .container_row {
   @include containerSize(calc(100vh - #{$headerHeight} - #{$navHeight}));
-  @include flex-row();
+  // @include flex-row();
   justify-content: space-evenly;
   align-items: center;
 }
@@ -140,11 +144,11 @@ a {
 
 .container_center {
   @include containerSize(calc(100vh - #{$headerHeight} - #{$navHeight}));
-  @include flex-center()
+  @include flex-center();
 }
 
 .container_grid {
-  @include containerSize(alc(100vh - #{$headerHeight} - #{$navHeight}), 50%);
+  @include containerSize(calc(50vh - #{$headerHeight} - #{$navHeight}), 100%);
   @include flex-row();
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -152,14 +156,13 @@ a {
 }
 
 .container_half {
-  @include containerSize(calc(100% - #{$headerHeight} - #{$navHeight}), 50%);
+  @include containerSize(calc(100% - #{$headerHeight} - #{$navHeight}), 100%);
   background-color: rgba(255, 255, 255, 0.3);
   overflow: hidden;
 }
 
 .container_content {
-  margin-right: 20%;
-  margin-left: 20%;
+  padding: $defaultPadding;
   text-align: center;
 }
 
@@ -167,8 +170,7 @@ a {
   @include flex-row();
   @include flex-center();
   flex-wrap: wrap;
-  width: 25%;
-  height: 40%;
+  margin: $defaultMargin;
 }
 
 .skill_bubble {
@@ -181,7 +183,8 @@ a {
 
 .box_project {
   @include box();
-  width: 25%;
+  margin: 10px;
+  width: "auto";
   text-align: center;
   background-color: rgba(255, 255, 255, 0.3);
 
@@ -195,7 +198,7 @@ a {
   @include flex-row();
   justify-content: flex-start;
   align-items: center;
-  width: 20%;
+  width: 80%;
 }
 
 .project-display {
@@ -206,7 +209,7 @@ a {
 }
 
 .project-background {
-  @include containerSize(calc(100vh - #{$headerHeight} - #{$navHeight}), 100% );
+  @include containerSize(calc(200vh - #{$headerHeight} - #{$navHeight}), 100%);
   position: absolute;
   z-index: -2;
 }
@@ -229,7 +232,6 @@ a {
   justify-content: space-evenly;
   width: 100%;
   z-index: 2;
-  margin: $defaultMargin;
 }
 
 .contact-icon {
@@ -238,8 +240,63 @@ a {
 }
 
 @media screen and (min-width: 770px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .nav-item {
+    padding: 0 3rem;
+  }
+
   .hero-text {
+    width: 25%;
     top: 40%;
     right: 10%;
+  }
+
+  .subtitle {
+    top: 80px;
+  }
+
+  .container_header {
+    height: $headerHeight;
+  }
+
+  .container_content {
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+
+  .container_row {
+    @include flex-row();
+  }
+
+  .container_grid {
+    @include containerSize(calc(100vh - #{$headerHeight} - #{$navHeight}), 50%);
+  }
+
+  .container_half {
+    @include containerSize(calc(100% - #{$headerHeight} - #{$navHeight}), 50%);
+  }
+
+  .box_skill {
+    width: 25%;
+    height: 40%;
+  }
+
+  .box_project {
+    width: 25%;
+  }
+
+  .box_contact {
+    width: 20%
+  }
+
+  .project-background {
+    @include containerSize(calc(100vh - #{$headerHeight} - #{$navHeight}), 100%);
+  }
+
+  .link_bar {
+    margin-bottom: $defaultMargin;
   }
 }

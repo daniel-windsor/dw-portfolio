@@ -12,7 +12,6 @@ class Navbar extends React.Component {
   render() {
     return (
       <div className='navbar'>
-
         <ul className='nav_items'>
           <li className='nav_item'>
             <Link
@@ -64,8 +63,8 @@ class Navbar extends React.Component {
           </li>
         </ul>
 
-        <ul>
-          <li className={`nav_item ${this.state.active === 'about' ? 'invisible' : undefined}`} onClick={() => { animateScroll.scrollToTop() }}>Back to Top</li>
+        <ul className='nav_items'>
+          <li className={`nav_item ${this.state.active === 'about' ? 'invisible' : undefined}`} onClick={() => { animateScroll.scrollToTop() }}>Top</li>
         </ul>
       </div>
     )

@@ -7,9 +7,6 @@ class AboutMe extends React.Component {
         <div className='container_header'>
           <h1>About me</h1>
         </div>
-        <span className='subtitle'>
-            <h2>Nice to meet you!</h2>
-        </span>
         <div className='container_center'>
           <span className='container_content'>
             <p>
@@ -21,6 +18,7 @@ class AboutMe extends React.Component {
             <p>
               Learning and continual growth is important to me. I am looking for a work environment that will challenge me and provide ongoing growth and development opportunities.
           </p>
+          <p>I'm based in Wellington, where I live with my family.  I am looking for permanent fulltime work, but will also be open to contracts.</p>
           </span>
         </div>
       </div>

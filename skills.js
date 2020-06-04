@@ -1,6 +1,6 @@
 export const skills = [
   {
-    name: 'The Essentials',
+    name: 'The essentials',
     technologies: [
       'HTML', 'CSS', 'SASS/SCSS', 'RESTful APIS', 'Git Version Control', 'Database management'
     ],
@@ -12,7 +12,7 @@ export const skills = [
     ],
   },
   {
-    name: 'Softer Skills',
+    name: 'Softer skills',
     technologies: [
       'Agile', 'Remote working', 'Reliability', 'Motivation', 'Communication'
     ]

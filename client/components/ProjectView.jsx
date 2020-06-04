@@ -20,7 +20,7 @@ class ProjectView extends React.Component {
           <a className='box_contact' style={{textAlign: 'center', display: 'block' }} href={project.github} target='_blank'>GitHub</a>
           {
             project.project &&
-            <a className='box_contact' style={{ textAlign: 'center', display: 'block' }} href={project.project} target='_blank' target='_blank'>Link</a>
+            <a className='box_contact' style={{ textAlign: 'center', display: 'block' }} href={project.project} target='_blank' target='_blank'>Website</a>
           }
         </span>
       </div>

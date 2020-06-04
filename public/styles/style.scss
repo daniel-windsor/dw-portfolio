@@ -39,7 +39,7 @@ body {
   padding: 0;
   font-size: 18px;
   font-family: "Source Sans Pro", sans-serif;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 a {
@@ -120,8 +120,9 @@ a {
 
 .subtitle {
   text-align: center;
-  position: relative;
-  top: 30px;
+  margin: $defaultMargin * 2;
+  // position: relative;
+  // top: 30px;
 }
 
 .container_header {
@@ -152,9 +153,9 @@ a {
 .container_grid {
   @include containerSize(calc(50vh - #{$headerHeight} - #{$navHeight}), 100%);
   @include flex-row();
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
+  // justify-content: flex-start;
+  // align-items: center;
+  overflow-x: scroll;
 }
 
 .container_half {
@@ -165,7 +166,6 @@ a {
 
 .container_content {
   padding: $defaultPadding;
-  text-align: center;
 }
 
 .box_skill {
@@ -185,7 +185,7 @@ a {
 
 .box_project {
   @include box();
-  margin: 10px;
+  margin: $defaultMargin;
   width: "auto";
   text-align: center;
   background-color: rgba(255, 255, 255, 0.3);
@@ -277,6 +277,10 @@ a {
 
   .container_grid {
     @include containerSize(calc(100vh - #{$headerHeight} - #{$navHeight}), 50%);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-x: hidden;
   }
 
   .container_half {
@@ -312,8 +316,7 @@ a {
   }
 
   .project-display {
-  height: calc(100vh - #{$headerHeight} - #{$navHeight});
-
+    height: calc(100vh - #{$headerHeight} - #{$navHeight});
   }
 
   .link_bar {

@@ -35,7 +35,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: 'Chess (For the Sophistocated)',
+    title: 'Chess (For the Sophisticated)',
     date: '24th February - 11th March 2020',
     icon: <i className="fas fa-lg fa-chess-king"></i>,
     image: '/img/chess.png',

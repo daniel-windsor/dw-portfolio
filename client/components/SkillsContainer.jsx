@@ -12,9 +12,6 @@ class SkillsContainer extends React.Component {
         <div className='container_header'>
           <h1>Skills</h1>
         </div>
-        <span className='subtitle'>
-          <h2>This is what I can do...</h2>
-        </span>
         <span className='container_row'>
           {
             skills.map((skill, i) => {

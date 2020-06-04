@@ -8,6 +8,22 @@ import AboutMe from './AboutMe'
 import SkillsContainer from './SkillsContainer'
 import LandingPage from './LandingPage'
 
+import firebase from 'firebase'
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC95gm4P54VpevCvLwepQKamF_BliuCAqc",
+  authDomain: "dw-portfolio-e264d.firebaseapp.com",
+  databaseURL: "https://dw-portfolio-e264d.firebaseio.com",
+  projectId: "dw-portfolio-e264d",
+  storageBucket: "dw-portfolio-e264d.appspot.com",
+  messagingSenderId: "287471345957",
+  appId: "1:287471345957:web:cbc6dda82d6422f37f7acc",
+  measurementId: "G-MWPT1522T9"
+};
+
+firebase.initializeApp(firebaseConfig)
+firebase.analytics()
+
 class App extends React.Component {
 
   render() {

@@ -34,6 +34,15 @@ $headerHeight: 150px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+@mixin hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+@mixin active {
+  transform: scale(0.99)
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -150,10 +159,6 @@ a {
 .container_grid {
   @include containerSize(calc(50vh - #{$headerHeight} - #{$navHeight}), 100%);
   @include flex-row();
-  // margin {
-  //   left: $defaultPadding;
-  //   right: $defaultPadding;
-  // }
   overflow-x: scroll;
 }
 
@@ -192,7 +197,11 @@ a {
   background-color: rgba(255, 255, 255, 0.3);
 
   &:hover {
-    cursor: pointer;
+    @include hover();
+  }
+
+  &:active {
+    @include active();
   }
 }
 
@@ -202,6 +211,15 @@ a {
   justify-content: flex-start;
   align-items: center;
   width: 80%;
+
+  &:hover {
+    @include hover();
+  }
+
+  &:active {
+    @include active();
+  }
+
 }
 
 .project-display {
@@ -229,7 +247,6 @@ a {
 
 .project-img {
   width: 80%;
-  // max-height: 120%;
 }
 
 .link_bar {
@@ -311,6 +328,7 @@ a {
 
   .box_contact {
     width: 20%;
+
   }
 
   .image-container {

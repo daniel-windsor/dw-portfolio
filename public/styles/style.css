@@ -235,6 +235,12 @@ a {
 
 .box_project:hover {
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.box_project:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
 }
 
 .box_contact {
@@ -257,6 +263,16 @@ a {
       -ms-flex-align: center;
           align-items: center;
   width: 80%;
+}
+
+.box_contact:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.box_contact:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
 }
 
 .project-display {

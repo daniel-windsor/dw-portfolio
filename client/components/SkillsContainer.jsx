@@ -12,7 +12,7 @@ class SkillsContainer extends React.Component {
         <div className='container_header'>
           <h1>Skills</h1>
         </div>
-        <span className='container_row'>
+        <span className='container_row' style={{flexWrap: 'wrap'}}>
           {
             skills.map((skill, i) => {
               return <SkillsCard key={i} {...skill} />

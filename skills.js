@@ -12,7 +12,13 @@ export const skills = [
     ],
   },
   {
-    name: 'Softer skills',
+    name: 'DevOps',
+    technologies: [
+      'Firebase'
+    ]
+  },
+  {
+    name: 'Soft skills',
     technologies: [
       'Agile', 'Remote working', 'Reliability', 'Motivation', 'Communication'
     ]

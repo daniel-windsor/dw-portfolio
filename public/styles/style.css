@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-size: 18px;
   font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -106,7 +107,7 @@ a {
 
 .subtitle {
   text-align: center;
-  margin: 40px;
+  margin: 20px;
 }
 
 .container_header {
@@ -198,34 +199,26 @@ a {
 
 .container_content {
   padding: 10px;
+  margin: 20px;
 }
 
 .box_skill {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 20px;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
 }
 
 .skill_bubble {
-  border: 1px solid black;
-  border-radius: 500px;
-  padding: 10px;
-  margin: 20px;
-  background-color: rgba(255, 255, 255, 0.3);
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 3.33333px;
+  padding-bottom: 5px;
+  list-style: none;
 }
 
 .box_project {
@@ -390,8 +383,32 @@ a {
             box-sizing: border-box;
   }
   .box_skill {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 10px;
     width: 25%;
     height: 40%;
+  }
+  .skill_bubble {
+    border: 1px solid black;
+    border-radius: 500px;
+    padding: 10px;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
   }
   .box_project {
     width: 25%;

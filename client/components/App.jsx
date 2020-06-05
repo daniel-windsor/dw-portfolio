@@ -8,7 +8,8 @@ import AboutMe from './AboutMe'
 import SkillsContainer from './SkillsContainer'
 import LandingPage from './LandingPage'
 
-import firebase from 'firebase'
+import firebase from 'firebase/app'
+import analytics from 'firebase/analytics'
 
 const firebaseConfig = {
   apiKey: "AIzaSyC95gm4P54VpevCvLwepQKamF_BliuCAqc",

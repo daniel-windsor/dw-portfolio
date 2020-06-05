@@ -39,7 +39,7 @@ body {
   padding: 0;
   font-size: 18px;
   font-family: "Source Sans Pro", sans-serif;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 a {
@@ -120,9 +120,7 @@ a {
 
 .subtitle {
   text-align: center;
-  margin: $defaultMargin * 2;
-  // position: relative;
-  // top: 30px;
+  margin: $defaultMargin;
 }
 
 .container_header {
@@ -133,7 +131,6 @@ a {
 
 .container_row {
   @include containerSize(calc(100vh - #{$headerHeight} - #{$navHeight}));
-  // @include flex-row();
   justify-content: space-evenly;
   align-items: center;
 }
@@ -153,8 +150,10 @@ a {
 .container_grid {
   @include containerSize(calc(50vh - #{$headerHeight} - #{$navHeight}), 100%);
   @include flex-row();
-  // justify-content: flex-start;
-  // align-items: center;
+  // margin {
+  //   left: $defaultPadding;
+  //   right: $defaultPadding;
+  // }
   overflow-x: scroll;
 }
 
@@ -166,21 +165,23 @@ a {
 
 .container_content {
   padding: $defaultPadding;
+  margin: $defaultMargin;
 }
 
 .box_skill {
-  @include flex-row();
-  @include flex-center();
-  flex-wrap: wrap;
-  margin: $defaultMargin;
+  @include flex-col();
+  padding: 0;
 }
 
 .skill_bubble {
-  border: 1px solid black;
-  border-radius: 500px;
-  padding: $defaultPadding;
-  margin: $defaultMargin;
-  background-color: rgba(255, 255, 255, 0.3);
+  padding: {
+    left: $defaultPadding*2;
+    right: $defaultPadding;
+    top: $defaultPadding/3;
+    bottom: $defaultPadding/2;
+
+  };
+  list-style: none;
 }
 
 .box_project {
@@ -288,8 +289,20 @@ a {
   }
 
   .box_skill {
+    @include flex-row();
+    @include flex-center();
+    flex-wrap: wrap;
+    margin: $defaultMargin/2;
     width: 25%;
     height: 40%;
+  }
+
+  .skill_bubble {
+    border: 1px solid black;
+    border-radius: 500px;
+    padding: $defaultPadding;
+    margin: $defaultMargin;
+    background-color: rgba(255, 255, 255, 0.3);
   }
 
   .box_project {
@@ -308,7 +321,6 @@ a {
   .project-img {
     align-self: center;
     max-width: 80%;
-    // max-height: 120%;
   }
 
   .project-background {

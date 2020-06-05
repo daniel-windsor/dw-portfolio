@@ -9,9 +9,9 @@ class Contact extends React.Component {
           <h1>Contact</h1>
         </div>
 
-        <span className='subtitle' style={{ color: '#D4BB7A'}}>
+        <div className='subtitle' style={{ color: '#D4BB7A'}}>
           <h2>Why not get in touch? I'd love to work with you!</h2>
-        </span>
+        </div>
 
         <div className='container_col'>
           <a href='mailto:daniel.windsor@protonmail.com' target='_blank' className='box_contact'>

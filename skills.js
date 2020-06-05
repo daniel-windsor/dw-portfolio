@@ -14,7 +14,7 @@ export const skills = [
   {
     name: 'DevOps',
     technologies: [
-      'Firebase'
+      'Firebase', 'Heroku'
     ]
   },
   {

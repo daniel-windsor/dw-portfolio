@@ -1,31 +1,30 @@
 import React from 'react'
 
 class Contact extends React.Component {
-
-  render() {
+  render () {
     return (
       <div id='contact' className='container'>
         <div className='container_header'>
           <h1>Contact</h1>
         </div>
 
-        <div className='subtitle' style={{ color: '#D4BB7A'}}>
+        <div className='subtitle' style={{ color: '#D4BB7A' }}>
           <h2>Why not get in touch? I'd love to work with you!</h2>
         </div>
 
         <div className='container_col'>
-          <a href='mailto:daniel.windsor@protonmail.com' target='_blank' className='box_contact'>
-            <i className="fas fa-envelope-square contact-icon"></i>
+          <a href='mailto:daniel.windsor@protonmail.com' target='_blank' rel='noopener noreferrer' className='box_contact'>
+            <i className='fas fa-envelope-square contact-icon' />
             <h2>Email</h2>
           </a>
 
-          <a href='https://www.linkedin.com/in/daniel-windsor-7785361a7/' target='_blank' className='box_contact'>
-            <i className="fab fa-linkedin contact-icon"></i>
+          <a href='https://www.linkedin.com/in/daniel-windsor-7785361a7/' target='_blank' rel='noopener noreferrer' className='box_contact'>
+            <i className='fab fa-linkedin contact-icon' />
             <h2>LinkedIn</h2>
           </a>
 
-          <a href='https://github.com/daniel-windsor' target='_blank' className='box_contact'>
-            <i className="fab fa-github-square contact-icon"></i>
+          <a href='https://github.com/daniel-windsor' target='_blank' rel='noopener noreferrer' className='box_contact'>
+            <i className='fab fa-github-square contact-icon' />
             <h2>GitHub</h2>
           </a>
 

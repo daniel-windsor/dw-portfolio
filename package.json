@@ -13,7 +13,8 @@
     "start": "run-s build server",
     "build": "webpack",
     "server": "node server",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "lint": "standard --fix"
   },
   "babel": {
     "presets": [
@@ -29,6 +30,22 @@
     "setupFiles": [
       "./tests/setup.js"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.jsx": [
+      "standard --fix"
+    ],
+    "*.js": [
+      "standard --fix"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint"
   },
   "dependencies": {
     "@babel/core": "^7.9.0",
@@ -48,13 +65,17 @@
     "webpack": "^4.43.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "css-loader": "^3.5.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
+    "husky": "^4.2.5",
     "jest": "^25.3.0",
+    "lint-staged": "^10.2.9",
     "nodemon": "^2.0.3",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "standard": "^14.3.4",
     "style-loader": "^1.2.1",
     "webpack-cli": "^3.3.11"
   }

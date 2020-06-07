@@ -1,12 +1,13 @@
 import React from 'react'
 
 class ProjectCard extends React.Component {
-  render() {
+  render () {
     return (
-      
-      <div 
+
+      <div
         className='box_project'
-        onClick={() => this.props.onClick(this.props.id)}>
+        onClick={() => this.props.onClick(this.props.id)}
+      >
         <h4>{this.props.title}</h4>
       </div>
     )

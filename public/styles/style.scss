@@ -2,7 +2,7 @@ $defaultPadding: 10px;
 $defaultMargin: 20px;
 
 $navHeight: 75px;
-$headerHeight: 150px;
+$headerHeight: 100px;
 
 @mixin containerSize($height: 100%, $width: 100%) {
   min-height: $height;
@@ -310,7 +310,7 @@ a {
     @include flex-center();
     flex-wrap: wrap;
     margin: $defaultMargin/2;
-    width: 25%;
+    width: 33%;
     height: 40%;
   }
 

@@ -6,11 +6,9 @@ import ProjectView from './ProjectView'
 import { projects } from '../../project'
 
 class ProjectContainer extends React.Component {
-
-  componentDidMount() {
-
+  componentDidMount () {
     const images = projects.map(project => {
-      let img = new Image()
+      const img = new Image() // eslint-disable-line
       img.src = project.image
 
       return img
@@ -32,7 +30,7 @@ class ProjectContainer extends React.Component {
     })
   }
 
-  render() {
+  render () {
     const active = this.state.activeProject
     return (
       <div id='projects' className='container'>
@@ -40,26 +38,24 @@ class ProjectContainer extends React.Component {
           <h1>Projects</h1>
         </div>
 
-        <SwitchTransition mode={'in-out'}>
+        <SwitchTransition mode='in-out'>
           <CSSTransition
             key={this.state.activeProject}
-            addEndListener={(node, done) => { node.addEventListener("transitionend", done, false) }}
-            classNames="slide">
+            addEndListener={(node, done) => { node.addEventListener('transitionend', done, false) }}
+            classNames='slide'
+          >
 
             <div
               className='project-background'
               style={{
                 backgroundImage: `url('img/noise.png'), linear-gradient(to bottom right, ${projects[active].gradient[0]}, ${projects[active].gradient[1]})`
-              }}>
-            </div>
+              }}
+            />
 
           </CSSTransition>
         </SwitchTransition>
 
- 
-
         <div className='container_row'>
-
 
           <div className='container_grid'>
             {
@@ -71,11 +67,12 @@ class ProjectContainer extends React.Component {
 
           <div className='container_half'>
 
-            <SwitchTransition mode={'out-in'}>
+            <SwitchTransition mode='out-in'>
               <CSSTransition
                 key={this.state.activeProject}
-                addEndListener={(node, done) => { node.addEventListener("transitionend", done, false) }}
-                classNames="slide">
+                addEndListener={(node, done) => { node.addEventListener('transitionend', done, false) }}
+                classNames='slide'
+              >
 
                 <ProjectView activeProject={active} image={this.state.images[active]} />
 
@@ -84,7 +81,7 @@ class ProjectContainer extends React.Component {
 
           </div>
         </div>
-      </div >
+      </div>
     )
   }
 }

@@ -1,65 +1,67 @@
 import React from 'react'
 
-import { Link, animateScroll } from "react-scroll";
-
+import { Link, animateScroll } from 'react-scroll'
 
 class Navbar extends React.Component {
-
   state = {
     active: 'about'
   }
 
-  render() {
+  render () {
     return (
       <div className='navbar'>
         <ul className='nav_items'>
           <li className='nav_item'>
             <Link
-              activeClass="active"
+              activeClass='active'
               to='about'
-              spy={true}
-              smooth={true}
+              spy
+              smooth
               offset={-75}
               duration={500}
-              onSetActive={() => this.setState({ active: 'about' })} >
+              onSetActive={() => this.setState({ active: 'about' })}
+            >
               About
-          </Link>
+            </Link>
           </li>
           <li className='nav_item'>
             <Link
-              activeClass="active"
+              activeClass='active'
               to='skills'
-              spy={true}
-              smooth={true}
+              spy
+              smooth
               offset={-75}
               duration={500}
-              onSetActive={() => this.setState({ active: 'skills' })} >
+              onSetActive={() => this.setState({ active: 'skills' })}
+            >
               Skills
-          </Link>
+            </Link>
           </li>
           <li className='nav_item'>
             <Link
-              activeClass="active"
+              activeClass='active'
               to='projects'
-              spy={true}
-              smooth={true}
+              spy
+              smooth
               offset={-75}
               duration={500}
-              onSetActive={() => this.setState({ active: 'projects' })} >
+              onSetActive={() => this.setState({ active: 'projects' })}
+            >
               Projects
-          </Link>
+            </Link>
           </li>
           <li className='nav_item'>
             <Link
-              activeClass="active"
+              activeClass='active'
               to='contact'
-              spy={true}
-              smooth={true}
+              spy
+              smooth
               offset={-75}
               duration={500}
-              onSetActive={() => this.setState({ active: 'contact' })} >
+              onSetActive={() => this.setState({ active: 'contact' })}
+            >
               Contact
-          </Link>
+            </Link>
           </li>
         </ul>
 

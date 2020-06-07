@@ -4,15 +4,14 @@ import SkillsCard from './SkillsCard'
 
 import { skills } from '../../skills'
 
-
 class SkillsContainer extends React.Component {
-  render() {
+  render () {
     return (
       <div id='skills' className='container'>
         <div className='container_header'>
           <h1>Skills</h1>
         </div>
-        <span className='container_row' style={{flexWrap: 'wrap'}}>
+        <span className='container_row' style={{ flexWrap: 'wrap' }}>
           {
             skills.map((skill, i) => {
               return <SkillsCard key={i} {...skill} />

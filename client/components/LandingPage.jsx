@@ -3,7 +3,7 @@ import React from 'react'
 const LandingPage = () => {
   return (
     <>
-      <div className='hero-img'></div>
+      <div className='hero-img' />
       <div className='hero-text'>
         <h1>Hi</h1>
         <h2>I'm Daniel</h2>
@@ -14,4 +14,3 @@ const LandingPage = () => {
 }
 
 export default LandingPage
-

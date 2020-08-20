@@ -221,8 +221,9 @@ a {
 }
 
 .image-container {
-  max-width: 100%;
-  max-height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   align-self: center;
   overflow: hidden;
 }
@@ -230,7 +231,7 @@ a {
 .project-img {
   align-self: center;
   max-width: 100%;
-  max-height: 120%;
+  max-height: 100%;
 }
 
 .link_bar {
@@ -239,10 +240,32 @@ a {
   flex-direction: row;
   width: 100%;
   justify-content: space-evenly;
-  margin: $defaultMargin;
+  box-sizing: border-box;
+  margin: {
+    top: $defaultMargin;
+    bottom: $defaultMargin;
+  }
 }
 
 .contact-icon {
   padding: 2rem;
   font-size: 3rem;
+}
+
+.slide-enter {
+  transform: translateX(-110%);
+}
+
+.slide-enter.slide-enter-active {
+  transform: translateX(0);
+  transition: 250ms ease;
+}
+
+.slide-exit {
+  transform: translateX(0%);
+}
+
+.slide-exit.slide-exit-active {
+  transform: translateX(110%);
+  transition: 250ms ease;
 }

@@ -1,12 +1,13 @@
 import React from 'react'
 
-
 import Navbar from './Navbar'
 import ProjectContainer from './ProjectContainer'
 import Contact from './Contact'
 import AboutMe from './AboutMe'
 import SkillsContainer from './SkillsContainer'
 import LandingPage from './LandingPage'
+
+import '../styles/style.scss'
 
 class App extends React.Component {
 

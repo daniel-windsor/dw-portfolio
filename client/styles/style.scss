@@ -209,6 +209,7 @@ a {
   max-height: calc(150vh - #{$headerHeight} - #{$navHeight});
   padding: $defaultPadding;
   justify-content: space-between;
+  align-items: center;
 }
 
 .project-background {
@@ -217,18 +218,9 @@ a {
   z-index: -2;
 }
 
-.image-container {
-  @include flex-col();
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 60%;
-  align-self: center;
-  overflow: hidden;
-}
-
 .project-img {
-  width: 80%;
+  width: auto;
+  max-height: 50%;
   // max-height: 120%;
 }
 
@@ -334,4 +326,22 @@ a {
   .link_bar {
     margin-bottom: $defaultMargin;
   }
+}
+
+.slide-enter {
+  transform: translateX(-110%);
+}
+
+.slide-enter.slide-enter-active {
+  transform: translateX(0);
+  transition: 250ms ease;
+}
+
+.slide-exit {
+  transform: translateX(0%);
+}
+
+.slide-exit.slide-exit-active {
+  transform: translateX(110%);
+  transition: 250ms ease;
 }

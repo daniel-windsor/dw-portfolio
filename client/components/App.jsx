@@ -7,6 +7,8 @@ import AboutMe from './AboutMe'
 import SkillsContainer from './SkillsContainer'
 import LandingPage from './LandingPage'
 
+import '../styles/style.scss'
+
 import firebase from 'firebase/app'
 import analytics from 'firebase/analytics' // eslint-disable-line
 

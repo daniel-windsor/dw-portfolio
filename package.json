@@ -65,12 +65,8 @@
     "webpack": "^4.43.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "babel-eslint": "^10.1.0",
-    "css-loader": "^3.5.3",
-=======
     "css-loader": "^3.6.0",
->>>>>>> firebase
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "husky": "^4.2.5",

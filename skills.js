@@ -22,5 +22,11 @@ export const skills = [
     technologies: [
       'Agile', 'Remote working', 'Reliability', 'Motivation', 'Communication'
     ]
+  },
+  {
+    name: 'Currently learning',
+    technologies: [
+      'C#', 'Phase.js'
+    ]
   }
 ]
